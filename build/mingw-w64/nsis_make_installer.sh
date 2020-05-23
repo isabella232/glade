@@ -89,7 +89,8 @@ cd $WORK
 
 #this python script is a helper to download binaries from OBS (OpenSuse build service)
 if test ! -e download-mingw-rpm.py; then
-  wget https://github.com/mkbosmans/download-mingw-rpm/raw/master/download-mingw-rpm.py
+  #wget https://github.com/mkbosmans/download-mingw-rpm/raw/master/download-mingw-rpm.py
+  wget https://github.com/albfan/download-mingw-rpm/raw/opensuse-lead-15.2/download-mingw-rpm.py
 fi
 
 if test ! -d $MINGW_ROOT; then
