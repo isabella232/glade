@@ -102,19 +102,19 @@ if test "$DEVELOPER" = "false" -a ! -d $MINGW_ROOT_BIN; then
 fi
 
 if test ! -e $MINGW_ROOT_BIN/bin/glade.exe; then
-cd $ROOT && ./autogen.sh --prefix=$MINGW_ROOT_BIN $CONFIGURE_ARGS && make && make install
+  cd $ROOT && ./autogen.sh --prefix=$MINGW_ROOT_BIN $CONFIGURE_ARGS && make && make install
 
-# rename executables names
-if test -e $MINGW_ROOT_BIN/bin/i686-w64-mingw32-glade.exe; then
-  mv $MINGW_ROOT_BIN/bin/i686-w64-mingw32-glade.exe $MINGW_ROOT_BIN/bin/glade.exe
-  mv $MINGW_ROOT_BIN/bin/i686-w64-mingw32-glade-previewer.exe $MINGW_ROOT_BIN/bin/glade-previewer.exe
-fi
+  # rename executables names
+  if test -e $MINGW_ROOT_BIN/bin/i686-w64-mingw32-glade.exe; then
+    mv $MINGW_ROOT_BIN/bin/i686-w64-mingw32-glade.exe $MINGW_ROOT_BIN/bin/glade.exe
+    mv $MINGW_ROOT_BIN/bin/i686-w64-mingw32-glade-previewer.exe $MINGW_ROOT_BIN/bin/glade-previewer.exe
+  fi
 
 fi
 
 if test ! -e $MINGW_ROOT_BIN/bin/glade.exe; then
-	echo Executable not found! Aborting...
-	exit 1
+  echo Executable not found! Aborting...
+  exit 1
 fi
 
 #copy files to installer directory
