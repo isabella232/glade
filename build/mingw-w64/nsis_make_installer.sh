@@ -68,17 +68,20 @@ esac
 
 # Install mingw-w64 if nescesary
 if test ! -e /usr/bin/i686-w64-mingw32-gcc; then
-sudo apt-get install mingw-w64
+ echo install mingw32-gcc
+ exit 1
 fi
 
 # Install nsis if nescesary
 if test ! -e /usr/bin/makensis; then
-sudo apt-get install nsis
+  echo install makensis
+  exit 1
 fi
 
 # Install 7z if nescesary
 if test ! -e /usr/bin/7z; then
-sudo apt-get install p7zip-full
+  echo install 7z
+  exit 1
 fi
 
 echo cd $WORK
