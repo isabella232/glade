@@ -19,7 +19,7 @@
 #
 
 CWD=`pwd`             # save CWD
-ARG0=`readlink -f $0` # get absolute path of this script whihc is localted under build/mingw-w64
+ARG0=`readlink -f $0` # get absolute path of this script which is located under build/mingw-w64
 WORK=`dirname $ARG0`  # work directory
 ROOTB=`dirname $WORK` # get Glade source root directory
 ROOT=`dirname $ROOTB` # get Glade source root directory
